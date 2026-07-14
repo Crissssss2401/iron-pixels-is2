@@ -2,7 +2,7 @@
 
 ## Equipo
 
-Pichi Games
+Iron Pixels
 
 ## Integrantes
 
