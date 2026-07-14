@@ -5,9 +5,9 @@ Somos un Grupo de Estudiantes de la carrera de Licenciatura en Tecnología de Si
 ## Integrantes
 
 - Cristian Sahon — Líder del equipo
-- Marcos — Responsable de documentación
-- Nahum — Responsable de herramientas
-- Gilmar — Responsable de comunicación
+- Marcos Sulugüi — Responsable de documentación
+- Nahum Albeño — Responsable de herramientas
+- Gilmar Maldonado — Responsable de comunicación
 
 ---
 
@@ -30,7 +30,7 @@ CALLA O CORRE es un videojuego de horror y supervivencia en el que el jugador de
 # Herramientas del equipo
 
 - Repositorio: GitHub
-- Gestión: Notion
+- Gestión: Trello
 - Diseño UI: Figma
 - IA: ChatGPT y GitHub Copilot
 
