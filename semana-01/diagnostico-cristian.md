@@ -1,4 +1,4 @@
-# Diagnostico IS1 — Cristian David Sahon Tonon
+# Diagnostico IS1 — Cristian David Sahón Tonón
 
 **Fecha:** 14 de julio de 2026 | **Equipo:** Iron Pixels
 
