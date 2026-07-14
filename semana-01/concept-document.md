@@ -1,124 +1,128 @@
-# Concept Document — CALLA O CORRE
+# Concept Document — Dead Harvest *(Nombre provisional)*
 
 **Equipo:** Iron Pixels  
-**Integrantes:** Cristian Sahon, Marcos Sulugüi, Nahum Albeño, Gilmar Maldonado
-**Fecha:** [14/07/2026]
+**Integrantes:** Cristian Sahon, Marcos Sulugüi, Gilmar Maldonado, Nahum Albeño  
+**Fecha:** 14-07-2026
 
 ---
 
 ## 1. Nombre del juego
 
-**CALLA O CORRE**
+**Dead Harvest** *(Nombre provisional)*
 
 ---
 
 ## 2. Género
 
-Horror · Supervivencia · Exploración
+Acción, Supervivencia y Roguelite 2D con perspectiva **Top-Down (cenital)**.
 
 ---
 
 ## 3. Sinopsis
 
-Tras un misterioso apagón provocado por un experimento fallido en un edificio corporativo de cinco niveles, un ente desconocido quedó atrapado en el interior y comenzó a cazar a cualquiera que intentara escapar. El jugador despierta solo, sin comunicación con el exterior y con una linterna casi sin batería; su única oportunidad es descender por el edificio mientras evita ser detectado por una criatura que se guía por el sonido y la luz.
+Después de una evacuación fallida, el protagonista queda atrapado en una zona de cuarentena completamente infestada. Su única esperanza es abrirse paso entre hordas de zombis, administrar sus recursos y sobrevivir el tiempo suficiente para alcanzar la salida. Para lograrlo deberá adaptarse a enemigos cada vez más peligrosos y aprovechar las mejoras obtenidas durante la partida.
 
 ---
 
 ## 4. Mecánica principal
 
-El jugador debe explorar cada nivel del edificio para encontrar llaves, baterías y fragmentos del código de activación del sistema de emergencia. Durante el recorrido deberá administrar la batería de su linterna, evitar hacer ruido y decidir constantemente entre correr o avanzar en silencio, ya que cualquier sonido o fuente de luz puede atraer al monstruo.
+El jugador debe sobrevivir a una serie de oleadas de zombis utilizando exclusivamente armas cuerpo a cuerpo. Durante cada ronda deberá administrar su estamina, elegir el arma más adecuada para cada tipo de enemigo y aprovechar el entorno para mantenerse con vida. Al finalizar una oleada podrá seleccionar una mejora temporal que fortalecerá sus habilidades para afrontar el siguiente desafío.
 
 ### Loop de juego
 
-1. Explorar el nivel.
-2. Buscar llaves, baterías y recursos.
-3. Administrar la batería de la linterna.
-4. Evitar al monstruo utilizando el sigilo.
-5. Encontrar un fragmento del código de activación.
-6. Abrir la salida hacia el siguiente nivel.
-7. Repetir el proceso hasta llegar al lobby.
+- Explorar la arena.
+- Combatir enemigos.
+- Sobrevivir a la oleada.
+- Elegir una mejora.
+- Prepararse para la siguiente ronda.
+- Derrotar al jefe final.
+- Escapar.
 
 ---
 
 ## 5. Personaje principal
 
-**Nombre:** Daniel *(nombre provisional)*
+**Nombre:** Ema *(provisional)*
 
-**Descripción visual:** Empleado del edificio con ropa formal, una mochila pequeña y una linterna como herramienta principal.
+**Descripción visual:**
 
-**Habilidades:**
+Un sobreviviente equipado con ropa táctica, mochila y diferentes armas improvisadas para combatir a los infectados.
 
-- Correr para escapar rápidamente.
-- Agacharse para reducir el ruido y evitar ser detectado.
-- Administrar el uso de la linterna.
-- Interactuar con puertas, llaves y objetos.
+### Habilidades
 
-**Controles básicos:**
+- Ataque cuerpo a cuerpo.
+- Esquiva (Dash).
+- Cambio entre armas.
+- Recolección de mejoras y botiquines.
+
+### Controles básicos
 
 - **WASD:** Movimiento.
-- **Shift:** Correr.
-- **Ctrl:** Agacharse.
-- **E:** Interactuar.
-- **F:** Encender o apagar la linterna.
+- **Click izquierdo:** Ataque.
+- **Barra espaciadora:** Esquiva.
+- **Q / E:** Cambiar de arma.
 
 ---
 
 ## 6. Pantallas / Niveles
 
-### Nivel 1 – Tutorial
+### 1. Menú Principal
 
-El jugador aprende los controles básicos, el funcionamiento de la linterna, la administración de la batería y cómo el monstruo detecta el sonido y la luz.
+Permite iniciar una nueva partida, acceder a las opciones del juego y salir de la aplicación.
 
-### Nivel 2 – Oficinas Administrativas
+### 2. Arena de Supervivencia
 
-Se introducen las primeras llaves, puertas bloqueadas y rutas alternativas mientras el monstruo comienza a patrullar. Al finalizar el nivel se obtiene el primer fragmento del código.
+Escenario principal donde el jugador enfrenta oleadas de zombis, obtiene mejoras temporales y administra sus recursos mientras la dificultad aumenta progresivamente.
 
-### Nivel 3 – Área de Laboratorios
+### 3. Batalla Final
 
-El jugador debe recorrer zonas más oscuras y administrar cuidadosamente sus recursos mientras el enemigo responde con mayor rapidez al sonido y a la luz. Aquí encuentra el segundo fragmento del código.
+Tras superar todas las oleadas aparece un jefe especial con habilidades únicas. El jugador deberá utilizar todo lo aprendido durante la partida para derrotarlo y desbloquear la salida.
 
-### Nivel 4 – Centro de Operaciones
+### 4. Pantalla Final
 
-Los recursos son más escasos y la dificultad aumenta. El jugador obtiene el último fragmento necesario para completar el código de activación.
-
-### Nivel 5 – Lobby Principal
-
-El jugador llega al lobby del edificio, donde se encuentra el panel del sistema de emergencia que controla la puerta principal. Mientras el monstruo lo persigue constantemente, deberá ingresar rápidamente el código que fue reuniendo durante toda la partida. Si logra introducirlo correctamente antes de ser alcanzado, la puerta se abrirá y escapará del edificio; de lo contrario, el monstruo lo atrapará y perderá la partida.
+Muestra el resultado de la partida (victoria o derrota), estadísticas como tiempo sobrevivido, enemigos eliminados y mejoras obtenidas, además de permitir reiniciar el juego.
 
 ---
 
 ## 7. Elemento de Inteligencia Artificial
 
-El enemigo utilizará una **Máquina de Estados (Finite State Machine)** basada en percepción.
+El juego implementará una IA basada en **Máquinas de Estados (Finite State Machine)** para controlar el comportamiento de los enemigos.
 
-### Estados del enemigo
+Cada tipo de zombi tendrá un comportamiento diferente:
+
+- **Caminante:** Persigue lentamente al jugador.
+- **Corredor:** Prioriza alcanzar rápidamente al jugador.
+- **Acorazado:** Resiste ataques ligeros y avanza sin detenerse.
+- **Explosivo:** Busca acercarse al jugador antes de detonar.
+
+La IA gestionará estados como:
 
 - Patrullar.
-- Investigar sonidos.
-- Detectar la luz de la linterna.
-- Perseguir al jugador.
-- Buscar en la última posición conocida.
-- Regresar a la patrulla.
+- Perseguir.
+- Atacar.
+- Reaccionar al daño recibido.
 
-La IA reaccionará dinámicamente a los sonidos producidos por correr, abrir puertas o interactuar con objetos, así como al uso de la linterna, haciendo que cada partida sea diferente.
+Esto permitirá ofrecer diferentes patrones de comportamiento sin recurrir a técnicas avanzadas de aprendizaje automático.
 
 ---
 
 ## 8. Motor de videojuego
 
-**Unity** *(propuesto; sujeto a la decisión del equipo de Programación de Videojuegos).*
+**Unity 2D**
 
 ---
 
 ## 9. Público objetivo
 
-Jóvenes y adultos entre 15 y 30 años que disfrutan videojuegos de horror, exploración y supervivencia con sesiones cortas de entre 15 y 20 minutos.
+Jugadores mayores de 13 años que disfrutan juegos de acción, supervivencia y desafíos de corta duración, especialmente quienes buscan partidas rápidas con dificultad progresiva y alta rejugabilidad.
 
 ---
 
 ## 10. ¿Por qué es viable en 20 semanas?
 
-El proyecto tiene un alcance realista para un equipo universitario de cuatro integrantes. Todo el juego se desarrolla en un único edificio dividido en cinco niveles, utiliza un solo enemigo principal y mecánicas sencillas como exploración, gestión de recursos y sigilo. La inteligencia artificial se implementará mediante una máquina de estados, una solución ampliamente utilizada y alcanzable dentro del tiempo disponible. Además, la duración máxima de 20 minutos permite concentrar el desarrollo en una experiencia completa sin requerir una gran cantidad de contenido.
+El proyecto tiene un alcance controlado al desarrollarse principalmente en un único escenario con mecánicas bien definidas. La cantidad de armas, enemigos y mejoras será limitada, permitiendo que un equipo de cuatro estudiantes pueda concentrarse en pulir el sistema de combate, la inteligencia artificial y el balance del juego.
+
+Además, cada partida tendrá una duración aproximada de **15 a 20 minutos**, cumpliendo con el mínimo viable solicitado para el curso.
 
 ---
 
@@ -126,18 +130,20 @@ El proyecto tiene un alcance realista para un equipo universitario de cuatro int
 
 ### Riesgo 1
 
-**Descripción:** La inteligencia artificial del enemigo puede resultar más compleja de implementar de lo esperado.
+**Descripción:** El combate puede volverse repetitivo tras varias oleadas.
 
-**Mitigación:** Desarrollar primero una versión básica con patrullaje y persecución, agregando posteriormente los comportamientos de investigación y búsqueda.
+**Mitigación:** Incorporar distintos tipos de enemigos, armas con estilos de combate diferentes y mejoras temporales que cambien la estrategia del jugador.
+
+---
 
 ### Riesgo 2
 
-**Descripción:** El desarrollo de todos los niveles podría tomar más tiempo del previsto.
+**Descripción:** La dificultad puede estar desbalanceada, haciendo el juego demasiado fácil o demasiado difícil.
 
-**Mitigación:** Diseñar un piso base reutilizable y modificar únicamente la distribución, iluminación y objetivos de cada nivel.
+**Mitigación:** Realizar pruebas constantes durante el desarrollo y ajustar parámetros como vida, daño, velocidad de los enemigos y aparición de recursos mediante configuraciones editables.
 
 ---
 
 ## 12. Retroalimentación recibida en clase
 
-**Pendiente de completar después de la presentación del pitch.**
+*Pendiente de completar después de la presentación del pitch.*
