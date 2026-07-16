@@ -1,7 +1,7 @@
 # Concept Document — Dead Harvest *(Nombre provisional)*
 
 **Equipo:** Iron Pixels  
-**Integrantes:** Cristian Sahon, Marcos Sulugüi, Gilmar Maldonado, Nahum Albeño  
+**Integrantes:** Cristian Sahon, Marcos Sulugüi, Gilmar Maldonado, Nahum Albeño, Wendy Chumil, Efer Cotúc
 **Fecha:** 14-07-2026
 
 ---
