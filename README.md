@@ -7,7 +7,7 @@
 - Nahum Albeño — Responsable de herramientas
 - Gilmar Maldonado — Responsable de comunicación
 - Wendy Chumil — Responsable de diseño y experiencia de usuario (UI/UX)
-- Efer Cotúc — Responsable de control de calidad y pruebas (QA)
+- Hefer Cotuc — Responsable de control de calidad y pruebas (QA)
 ---
 
 # Proyecto
