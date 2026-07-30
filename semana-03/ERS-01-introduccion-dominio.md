@@ -1,57 +1,79 @@
-# 01 - Introducción y Dominio del Problema
+# ERS-01 - Introducción y Dominio del Problema
 
-**Responsable:** Cristian Sahón  
-**Rol:** Scrum Master – Líder del Equipo
+| Información | Detalle |
+|-------------|---------|
+| **Responsable** | Cristian Sahón |
+| **Rol** | Scrum Master – Líder del Equipo |
+| **Documento** | ERS-01 – Introducción y Dominio del Problema |
+| **Versión** | 0200 |
+| **Fecha** | 29/07/2026 |
 
 ---
 
 # 1. Introducción
+# 1. Introducción
 
-## 1.1 Introducción
+Este documento presenta la **Especificación de Requisitos de Software (ERS)** correspondiente al proyecto **Dead Harvest**, un videojuego de acción y supervivencia en 2D con perspectiva cenital desarrollado como proyecto integrador del curso de Ingeniería de Software II por el equipo **Iron Pixels**.
 
-Dead Harvest es un videojuego de acción y supervivencia en 2D con perspectiva cenital (Top-Down), desarrollado como proyecto integrador para el curso de Ingeniería de Software II. El objetivo principal del proyecto es diseñar e implementar una experiencia de juego donde el jugador deba sobrevivir a sucesivas oleadas de zombis utilizando exclusivamente armas cuerpo a cuerpo, combinando estrategia, administración de recursos y combate dinámico.
+El propósito de esta especificación es definir de manera clara, organizada y verificable los requerimientos funcionales y no funcionales que servirán como base para el diseño, desarrollo, implementación y validación del videojuego.
 
-La elaboración de esta Especificación de Requerimientos de Software (ERS) tiene como propósito establecer de forma clara, organizada y verificable todos los requerimientos que servirán como base para el diseño, implementación, pruebas y validación del videojuego. Este documento constituye la referencia principal para el equipo de desarrollo, permitiendo mantener la trazabilidad entre los objetivos del proyecto, los requerimientos funcionales, las historias de usuario y las futuras implementaciones del sistema.
+La necesidad del proyecto surge como parte del desarrollo del Proyecto Integrador del curso, cuyo objetivo consiste en aplicar metodologías ágiles, Ingeniería de Requisitos, control de versiones mediante GitHub y desarrollo de videojuegos utilizando Unity 2D.
 
-El desarrollo del proyecto busca aplicar los principios de la Ingeniería de Software mediante el uso de metodologías ágiles, gestión de requerimientos y documentación técnica, asegurando que cada funcionalidad implementada responda a una necesidad previamente identificada y validada por el equipo.
-
----
-
-## 1.2 Alcance
-
-La primera versión de Dead Harvest corresponde al Producto Mínimo Viable (MVP) del videojuego y será desarrollada utilizando Unity 2D como motor principal. El juego estará orientado a partidas individuales con una duración aproximada de entre quince y veinte minutos, en las cuales el jugador deberá sobrevivir a una serie de oleadas de enemigos hasta enfrentarse a un jefe final.
-
-Dentro del alcance de esta versión se contempla la implementación de las mecánicas principales del juego, incluyendo el movimiento del personaje en ocho direcciones, combate cuerpo a cuerpo mediante cuatro armas diferentes, sistema de estamina, recolección de botiquines, inteligencia artificial para distintos tipos de zombis, sistema progresivo de oleadas, interfaz de usuario (HUD), menú principal y pantalla de resultados.
-
-Asimismo, el sistema incorporará diferentes tipos de enemigos con comportamientos específicos controlados mediante una Máquina de Estados Finitos (Finite State Machine), permitiendo ofrecer una experiencia de juego dinámica y desafiante.
-
-Quedan fuera del alcance de esta primera versión funcionalidades como el modo multijugador, guardado persistente de partidas, personalización avanzada del personaje, generación procedural de niveles, inteligencia artificial basada en aprendizaje automático, contenido descargable y cualquier funcionalidad que implique servicios en línea o conexión con servidores externos.
-
-La definición de este alcance responde al objetivo de desarrollar un producto completamente funcional dentro del tiempo establecido para el proyecto, manteniendo un equilibrio entre complejidad técnica, calidad y viabilidad.
+Este documento constituye la referencia principal para el equipo durante todo el ciclo de desarrollo, permitiendo mantener la trazabilidad entre los objetivos del proyecto, los requerimientos, las historias de usuario, los casos de uso y el Product Backlog.
 
 ---
 
-## 1.3 Objetivos
+## 1.1 Alcance
+
+La primera versión de **Dead Harvest** contempla el desarrollo de un videojuego de supervivencia en 2D con perspectiva cenital, orientado a partidas individuales con una duración aproximada de veinte minutos.
+
+Durante la partida el jugador controlará a un único personaje que deberá sobrevivir a sucesivas oleadas de zombis utilizando exclusivamente armas cuerpo a cuerpo, administrando correctamente recursos como la vida y la estamina mientras enfrenta enemigos con diferentes comportamientos.
+
+La versión MVP incluye las siguientes funcionalidades:
+
+- Movimiento del personaje en ocho direcciones.
+- Sistema de combate cuerpo a cuerpo.
+- Cuatro armas diferentes (Espada, Hacha, Mazo y Lanza).
+- Sistema de cambio de armamento.
+- Sistema de estamina.
+- Sistema de oleadas progresivas.
+- Inteligencia Artificial basada en Máquina de Estados Finitos (FSM).
+- Cuatro tipos de enemigos (Caminante, Corredor, Acorazado y Explosivo).
+- Sistema de recolección de botiquines.
+- HUD con información del jugador.
+- Menú principal.
+- Pantalla de resultados.
+- Jefe final.
+
+Quedan fuera del alcance de esta versión:
+
+- Modo multijugador.
+- Guardado persistente de partidas.
+- Microtransacciones.
+- Personalización de personajes.
+- Inteligencia Artificial basada en Machine Learning.
+- Generación procedural de niveles.
+- Contenido descargable (DLC).
+
+Estas funcionalidades podrán desarrollarse en futuras versiones del videojuego sin afectar el cumplimiento del Producto Mínimo Viable (MVP).
+
+---
+
+## 1.2 Objetivos
 
 ### Objetivo General
 
-Desarrollar un videojuego de acción y supervivencia en 2D que ofrezca una experiencia desafiante basada en combate cuerpo a cuerpo, inteligencia artificial y progresión por oleadas, aplicando buenas prácticas de Ingeniería de Software durante todo el proceso de desarrollo.
+Desarrollar un videojuego de supervivencia en 2D que ofrezca una experiencia desafiante basada en combate cuerpo a cuerpo, inteligencia artificial y progresión mediante oleadas, aplicando principios de Ingeniería de Software durante todo el proceso de desarrollo.
 
 ### Objetivos Específicos
 
-- Diseñar un sistema de combate basado exclusivamente en armas cuerpo a cuerpo, permitiendo que cada arma posea características y estrategias diferentes.
-
-- Implementar un sistema de Inteligencia Artificial basado en Máquinas de Estados Finitos que controle el comportamiento de los distintos tipos de enemigos.
-
-- Desarrollar un sistema de oleadas progresivas que incremente gradualmente la dificultad del juego conforme avance la partida.
-
-- Implementar un sistema de administración de recursos basado en vida, estamina y botiquines que obligue al jugador a tomar decisiones estratégicas durante el combate.
-
-- Diseñar una interfaz gráfica clara y minimalista que permita al jugador visualizar en tiempo real su estado durante la partida.
-
-- Aplicar los principios de Ingeniería de Software mediante la elaboración de una ERS, Product Backlog, historias de usuario, trazabilidad de requerimientos y documentación técnica del proyecto.
-
-- Entregar un Producto Mínimo Viable completamente funcional, estable y jugable dentro del tiempo establecido para el curso.
+- Desarrollar un MVP completamente funcional y jugable utilizando Unity 2D.
+- Implementar un sistema de combate cuerpo a cuerpo con cuatro armas diferenciadas.
+- Implementar un sistema de Inteligencia Artificial basado en Máquinas de Estados Finitos para controlar el comportamiento de los enemigos.
+- Desarrollar un sistema de oleadas con incremento progresivo de dificultad.
+- Diseñar una interfaz clara y responsiva que permita visualizar la información principal del jugador.
+- Aplicar buenas prácticas de Ingeniería de Software mediante la elaboración de la ERS, Product Backlog, historias de usuario y trazabilidad entre todos los artefactos del proyecto.
+- Obtener un videojuego estable capaz de ejecutarse a 60 FPS en equipos de escritorio con Windows.
 
 ---
 
@@ -59,15 +81,15 @@ Desarrollar un videojuego de acción y supervivencia en 2D que ofrezca una exper
 
 ## 2.1 Introducción al Dominio del Problema
 
-Dead Harvest pertenece al género de videojuegos de acción y supervivencia con perspectiva cenital, donde el objetivo principal del jugador consiste en sobrevivir durante el mayor tiempo posible frente a oleadas crecientes de enemigos.
+**Dead Harvest** pertenece al dominio de los videojuegos de acción y supervivencia con perspectiva cenital (Top-Down), donde el jugador debe sobrevivir enfrentando enemigos controlados por Inteligencia Artificial mientras administra recursos limitados.
 
-A diferencia de otros juegos del mismo género que basan su mecánica principal en armas de fuego, Dead Harvest centra toda la experiencia de juego en el combate cuerpo a cuerpo. Esto obliga al jugador a administrar correctamente su posición, la estamina disponible, el tipo de arma equipada y el momento adecuado para atacar o esquivar.
+A diferencia de otros juegos del género, el combate se basa exclusivamente en armas cuerpo a cuerpo, obligando al jugador a mantener un posicionamiento estratégico, administrar correctamente su estamina y seleccionar el arma adecuada según el tipo de enemigo.
 
-El videojuego incorpora una Inteligencia Artificial basada en Máquinas de Estados Finitos (Finite State Machine), permitiendo que los distintos tipos de zombis presenten comportamientos diferenciados durante la partida. De esta forma, la dificultad no depende únicamente del incremento en la cantidad de enemigos, sino también de la variedad de estrategias necesarias para enfrentarlos.
+El sistema de juego incorpora un modelo de progresión basado en oleadas, incrementando gradualmente la dificultad mediante una mayor cantidad de enemigos y diferentes patrones de comportamiento.
 
-El sistema de progresión está organizado mediante oleadas, donde cada ronda incrementa gradualmente la cantidad y complejidad de los enemigos presentes en la arena. Entre cada oleada el jugador tendrá un breve período de descanso que le permitirá seleccionar mejoras temporales antes de continuar con la siguiente ronda.
+La Inteligencia Artificial de los enemigos será implementada mediante una Máquina de Estados Finitos (Finite State Machine), permitiendo que cada tipo de zombi pueda patrullar, detectar al jugador, perseguirlo y atacarlo según las condiciones del entorno.
 
-El proyecto será desarrollado completamente utilizando Unity 2D y lenguaje de programación C#, empleando herramientas de control de versiones mediante GitHub y una metodología de desarrollo basada en Scrum.
+El videojuego será desarrollado completamente utilizando Unity 2022.3 LTS y lenguaje de programación C#, utilizando GitHub como sistema de control de versiones y Scrum como metodología de trabajo.
 
 ---
 
@@ -75,20 +97,24 @@ El proyecto será desarrollado completamente utilizando Unity 2D y lenguaje de p
 
 | Término | Definición |
 |----------|------------|
-| Arena | Escenario principal donde se desarrolla la partida. |
-| Botiquín | Objeto recolectable que restaura parcialmente la vida del jugador. |
+| Acorazado | Zombi con alta resistencia que reduce parcialmente el daño recibido por armas ligeras. |
+| Botiquín | Objeto recolectable que restaura el 25% de la vida del jugador. |
 | Caminante | Zombi básico con baja velocidad y comportamiento simple. |
-| Corredor | Zombi rápido con poca resistencia pero alta movilidad. |
-| Acorazado | Enemigo con alta resistencia que reduce el daño recibido por armas ligeras. |
-| Explosivo | Zombi que detona al morir, causando daño en un área determinada. |
-| Dash | Movimiento rápido utilizado para esquivar ataques enemigos. |
-| Estamina | Recurso utilizado para ejecutar ataques y esquivas. |
-| FSM | Máquina de Estados Finitos utilizada para controlar la Inteligencia Artificial de los enemigos. |
+| Corredor | Zombi rápido con poca resistencia física. |
+| Dash | Movimiento rápido utilizado para esquivar ataques enemigos consumiendo estamina. |
+| Estamina | Recurso utilizado para ejecutar ataques y esquivas. Se recupera automáticamente cuando el jugador permanece inactivo. |
+| Explosivo | Zombi que detona al morir causando daño en un área determinada. |
+| FSM | Máquina de Estados Finitos utilizada para controlar el comportamiento de la Inteligencia Artificial de los enemigos. |
 | Gameplay | Conjunto de mecánicas que conforman la experiencia de juego. |
 | Hitbox | Área de colisión utilizada para detectar impactos entre armas y enemigos. |
-| HUD | Interfaz gráfica mostrada durante la partida con información relevante para el jugador. |
-| Oleada | Conjunto de enemigos generado durante una ronda del juego. |
-| Producto Mínimo Viable (MVP) | Primera versión completamente funcional del videojuego desarrollada durante el proyecto. |
-| Unity 2D | Motor de videojuegos utilizado para desarrollar Dead Harvest. |
+| HUD | Head-Up Display. Interfaz gráfica que muestra información del jugador durante la partida. |
+| Oleada | Ronda de enemigos generada por el sistema con dificultad progresiva. |
+| Pooling | Técnica utilizada para reutilizar objetos y optimizar el rendimiento del videojuego. |
+| MoSCoW | Técnica de priorización utilizada para clasificar las historias de usuario en Must Have, Should Have, Could Have y Won't Have. |
+| RF | Requerimiento Funcional del sistema. |
+| RNF | Requerimiento No Funcional del sistema. |
 
 ---
+
+**Responsable:** Cristian Sahón  
+**Rol:** Scrum Master – Líder del Equipo
