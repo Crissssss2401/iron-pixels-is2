@@ -1,0 +1,162 @@
+# ERS-02 - Situación Actual y Necesidades del Negocio
+
+| Información | Detalle |
+|-------------|---------|
+| **Responsable** | Hefer Cotúc |
+| **Rol** | Product Owner – Responsable de QA |
+| **Documento** | ERS-02 – Situación Actual y Necesidades del Negocio |
+| **Versión** | 0200 |
+| **Fecha** | 29/07/2026 |
+
+---
+
+# 3. Descripción de la Situación Actual
+
+## 3.1 Pros y Contras de la Situación Actual
+
+Antes de iniciar el desarrollo de **Dead Harvest**, el equipo realizó un análisis del estado actual del proyecto con el propósito de identificar fortalezas, limitaciones y oportunidades de mejora. Este análisis permitió establecer un punto de partida realista para la planificación del desarrollo y definir estrategias que reduzcan los riesgos durante la implementación.
+
+### 3.1.1 Fortalezas
+
+**ID:** F-001
+
+**Nombre:** Conocimiento previo en Unity 2D.
+
+**Versión:** 1.0
+
+**Fecha:** 27/07/2026
+
+**Descripción**
+
+El equipo posee conocimientos básicos en el desarrollo de videojuegos utilizando Unity 2D, lenguaje C# y herramientas de control de versiones mediante GitHub. Esto facilita la construcción rápida de prototipos funcionales y permite distribuir el trabajo de forma colaborativa.
+
+**Comentarios**
+
+Se continuará utilizando GitHub como sistema de control de versiones y Scrum como metodología de desarrollo para mantener una organización constante durante todo el proyecto.
+
+---
+
+### 3.1.2 Debilidades
+
+**ID:** D-001
+
+**Nombre:** Ausencia de una base de código previa.
+
+**Versión:** 1.0
+
+**Fecha:** 27/07/2026
+
+**Descripción**
+
+El proyecto inicia completamente desde cero, por lo que no existe una arquitectura reutilizable ni recursos propios previamente desarrollados.
+
+Esto implica un mayor esfuerzo inicial para construir las mecánicas básicas del videojuego y establecer la estructura del proyecto.
+
+**Comentarios**
+
+Como estrategia de mitigación se utilizarán assets gratuitos de Unity Asset Store durante las primeras iteraciones, permitiendo concentrar el esfuerzo en el desarrollo de las funcionalidades principales.
+
+---
+
+## 3.2 Modelos de Procesos Actuales
+
+### 3.2.1 Actores del proceso actual
+
+Actualmente únicamente existen dos actores involucrados en el proyecto.
+
+| ID | Actor | Descripción |
+|----|--------|-------------|
+| AN-001 | Jugador | Usuario final que interactuará con el videojuego. |
+| AN-002 | Equipo de Desarrollo | Responsable del diseño, documentación e implementación del sistema. |
+
+---
+
+### 3.2.2 Proceso actual
+
+Antes del inicio del proyecto no existía un proceso formal de desarrollo.
+
+Las primeras actividades consistieron en reuniones internas donde se discutieron distintas propuestas de videojuegos, hasta seleccionar la idea final de **Dead Harvest**.
+
+Posteriormente se definieron:
+
+- Concepto del videojuego.
+- Alcance del MVP.
+- Product Backlog inicial.
+- Requerimientos funcionales.
+- Requerimientos no funcionales.
+- Roles del equipo.
+- Organización del repositorio GitHub.
+
+A partir de este punto comenzó el desarrollo formal del proyecto siguiendo una metodología ágil basada en Scrum.
+
+---
+
+## 3.3 Entorno Tecnológico Actual
+
+### Hardware
+
+El desarrollo del videojuego se realizará utilizando computadoras personales con las siguientes características mínimas:
+
+- Sistema Operativo Windows 11.
+- Memoria RAM mínima de 16 GB.
+- Procesador compatible con Unity 2022 LTS.
+- Tarjeta gráfica con soporte para aceleración por hardware.
+
+El videojuego estará orientado inicialmente a computadoras de escritorio utilizando teclado y mouse como dispositivos principales de entrada.
+
+---
+
+### Software
+
+Las herramientas principales utilizadas durante el desarrollo serán:
+
+| Herramienta | Propósito |
+|-------------|-----------|
+| Unity 2022.3 LTS | Motor de desarrollo del videojuego. |
+| Visual Studio 2022 | Desarrollo en lenguaje C#. |
+| GitHub | Control de versiones y administración del repositorio. |
+| GitHub Projects | Gestión del Product Backlog y seguimiento de tareas. |
+| Microsoft Word | Elaboración de la documentación técnica. |
+| Draw.io | Diagramas UML y arquitectura del sistema. |
+
+El videojuego no utilizará servidores externos ni servicios en línea, por lo que funcionará completamente de manera local.
+
+---
+
+# 4. Necesidades del Negocio
+
+El proyecto **Dead Harvest** busca desarrollar un videojuego que represente una experiencia de supervivencia dinámica, donde el jugador deba tomar decisiones estratégicas para mantenerse con vida frente a enemigos controlados por Inteligencia Artificial.
+
+Además del objetivo recreativo, el proyecto tiene una finalidad académica, permitiendo aplicar conocimientos de Ingeniería de Requisitos, documentación técnica, metodologías ágiles, control de versiones y desarrollo de videojuegos.
+
+---
+
+## 4.1 Objetivos del Negocio
+
+| ID | Objetivo | Importancia |
+|----|----------|------------|
+| ON-01 | Ofrecer partidas de supervivencia con dificultad progresiva y una duración aproximada de veinte minutos. | Alta |
+| ON-02 | Proporcionar un sistema de combate con retroalimentación inmediata mediante animaciones, efectos visuales y sonido. | Alta |
+| ON-03 | Mantener trazabilidad entre objetivos, requerimientos, casos de uso e historias de usuario mediante una ERS organizada y GitHub Projects. | Alta |
+| ON-04 | Cumplir con los requisitos académicos establecidos para el Proyecto Integrador del curso Ingeniería de Software II. | Alta |
+
+---
+
+## 4.2 Modelo de Proceso del Negocio
+
+El flujo principal del videojuego se desarrolla de la siguiente manera:
+
+1. El jugador inicia el videojuego desde el menú principal.
+2. Selecciona la opción **Nueva Partida**.
+3. El sistema genera la arena inicial.
+4. Comienza la primera oleada de enemigos.
+5. El jugador combate utilizando armas cuerpo a cuerpo.
+6. Durante la partida administra su vida y estamina.
+7. Recoge botiquines cuando están disponibles.
+8. Al finalizar una oleada obtiene una mejora temporal.
+9. Se genera una nueva oleada con mayor dificultad.
+10. Tras superar todas las oleadas aparece el jefe final.
+11. Al finalizar la partida el sistema muestra la pantalla de resultados.
+12. El jugador puede reiniciar la partida o regresar al menú principal.
+
+Este proceso representa el flujo principal del Producto Mínimo Viable y constituye la base para el desarrollo de los casos de uso y los requerimientos funcionales definidos en la siguiente sección del documento.
