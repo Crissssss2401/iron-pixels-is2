@@ -1,0 +1,9 @@
+Proyecto: Dead Harvest
+Responsable: Nahum Albeño (Herramientas)
+Actividad: Semana 4 - Mockup de la pantalla clave (HUD)
+
+Enlace al proyecto en Figma para revisión:
+https://www.figma.com/make/Aeq2MRHchzJJH4RfVgGwq6/Mockup_HUD?t=b3G1K0HJNW9ZIj5v-1
+
+Notas de diseño:
+El HUD fue diseñado para ser lo menos invasivo posible. La vida y la estamina están agrupadas arriba a la izquierda para una lectura rápida. El arma actual se muestra abajo a la derecha para confirmar los cambios rápidos de equipo, y la oleada se mantiene al centro arriba para dar contexto del progreso sin tapar la visión del combate.
