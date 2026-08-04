@@ -9,7 +9,7 @@
 | **Nombre** | Atacar cuerpo a cuerpo |
 | **Historia de Usuario Relacionada** | HU-02 – Ataque cuerpo a cuerpo |
 | **Requerimiento Funcional** | RF-01 – Ataque cuerpo a cuerpo |
-| **Versión** | 1.0 |
+| **Versión** | 1.1 |
 | **Fecha** | 04/08/2026 |
 
 ---
