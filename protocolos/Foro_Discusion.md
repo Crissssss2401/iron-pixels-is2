@@ -46,7 +46,7 @@ Estas relaciones permiten construir diagramas de casos de uso más claros, organ
 
 ## Evidencia de la publicación
 
-> **Agregar aquí la captura de pantalla de la publicación realizada en el foro.**
+https://github.com/Crissssss2401/iron-pixels-is2/blob/main/protocolos/Evidencia1.jpeg
 
 ---
 
@@ -60,12 +60,16 @@ Comentario publicado:
 
 ## Evidencia del comentario
 
+https://github.com/Crissssss2401/iron-pixels-is2/blob/main/protocolos/Evidencia2.jpeg
+
 ---
 
 # Enlace al foro
 
 
 https://github.com/Crissssss2401/iron-pixels-is2/discussions/26
+
+---
 
 # Reflexión
 
