@@ -66,7 +66,6 @@ https://github.com/Crissssss2401/iron-pixels-is2/blob/main/protocolos/Evidencia2
 
 # Enlace al foro
 
-
 https://github.com/Crissssss2401/iron-pixels-is2/discussions/26
 
 ---
