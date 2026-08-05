@@ -68,7 +68,7 @@ Comentario publicado:
 
 > **Pegar aquí el enlace del foro del curso.**
 
----
+https://github.com/Crissssss2401/iron-pixels-is2/discussions/26
 
 # Reflexión
 
