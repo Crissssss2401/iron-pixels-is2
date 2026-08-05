@@ -2,8 +2,8 @@
 ## Ingeniería de Software
 ### Proyecto: Dead Harvest
 
-**Integrante:** Gilmar Maldonado  
-**Rol:** Responsable de Comunicación
+**Integrante:** Cristian Sahón   
+**Rol:** Scrum Master
 
 ---
 
@@ -60,13 +60,10 @@ Comentario publicado:
 
 ## Evidencia del comentario
 
-> **Agregar aquí la captura de pantalla del comentario realizado.**
-
 ---
 
 # Enlace al foro
 
-> **Pegar aquí el enlace del foro del curso.**
 
 https://github.com/Crissssss2401/iron-pixels-is2/discussions/26
 
