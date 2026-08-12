@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT" compressed="false">
+  <diagram id="dead-harvest" name="Diagrama de Estados">
+    <mxGraphModel dx="1022" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" value="Dead Harvest – Diagrama de Estados del Personaje" vertex="1">
+          <mxGeometry height="40" width="700" x="240" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="init" parent="1" style="ellipse;html=1;aspect=fixed=1;fillColor=#000000;strokeColor=#000000;" vertex="1">
+          <mxGeometry height="24" width="24" x="90" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fontSize=14;fontStyle=1;" value="Inactivo" vertex="1">
+          <mxGeometry height="60" width="160" x="190" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fontSize=14;fontStyle=1;" value="Caminando" vertex="1">
+          <mxGeometry height="60" width="160" x="430" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fontSize=14;fontStyle=1;" value="Atacando" vertex="1">
+          <mxGeometry height="60" width="160" x="430" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fontSize=14;fontStyle=1;" value="Esquivando" vertex="1">
+          <mxGeometry height="60" width="160" x="190" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fontSize=14;fontStyle=1;" value="Sin estamina" vertex="1">
+          <mxGeometry height="60" width="160" x="690" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fontSize=14;fontStyle=1;" value="Derrotado" vertex="1">
+          <mxGeometry height="60" width="160" x="690" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="final" parent="1" style="ellipse;html=1;aspect=fixed=1;fillColor=#000000;strokeColor=#000000;" vertex="1">
+          <mxGeometry height="24" width="24" x="910" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="t0" edge="1" parent="1" source="init" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s1" value="Iniciar partida">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s2" value="Iniciar movimiento">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s1" value="Dejar de moverse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s3" value="Presionar ataque [estamina suficiente]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s3" value="Presionar ataque [estamina suficiente]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" edge="1" parent="1" source="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s1" value="Termina ataque">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s4" value="Presionar esquiva [estamina suficiente]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s4" value="Presionar esquiva [estamina suficiente]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" edge="1" parent="1" source="s4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s1" value="Termina esquiva">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t9" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s5" value="Intentar acción [estamina insuficiente]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t10" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s5" value="Estamina agotada">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t11" edge="1" parent="1" source="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s5" value="Estamina agotada">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t12" edge="1" parent="1" source="s4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s5" value="Estamina agotada">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t13" edge="1" parent="1" source="s5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s1" value="Recuperar estamina mínima">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t14" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s6" value="Vida = 0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t15" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s6" value="Vida = 0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t16" edge="1" parent="1" source="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s6" value="Vida = 0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t17" edge="1" parent="1" source="s4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s6" value="Vida = 0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t18" edge="1" parent="1" source="s5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="s6" value="Vida = 0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t19" edge="1" parent="1" source="s6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;" target="final" value="Fin de partida">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

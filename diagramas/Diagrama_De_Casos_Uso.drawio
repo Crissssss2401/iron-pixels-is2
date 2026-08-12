@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT" compressed="false">
+  <diagram id="dead-harvest" name="Diagrama de Casos de Uso">
+    <mxGraphModel dx="1572" dy="815" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" value="Dead Harvest – Diagrama de Casos de Uso" vertex="1">
+          <mxGeometry height="40" width="600" x="280" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" parent="1" style="swimlane;html=1;startSize=35;horizontal=1;rounded=0;fontStyle=1;fontSize=15;" value="Dead Harvest" vertex="1">
+          <mxGeometry height="650" width="720" x="250" y="80" as="geometry">
+            <mxRectangle height="35" width="130" x="250" y="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u1" parent="sys" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed=0;fontSize=13;" value="Iniciar partida" vertex="1">
+          <mxGeometry height="60" width="190" x="140" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u2" parent="sys" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed=0;fontSize=13;" value="Atacar cuerpo a cuerpo" vertex="1">
+          <mxGeometry height="60" width="190" x="140" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="u3" parent="sys" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed=0;fontSize=13;" value="Cambiar armamento" vertex="1">
+          <mxGeometry height="60" width="190" x="140" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="u4" parent="sys" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed=0;fontSize=13;" value="Esquivar" vertex="1">
+          <mxGeometry height="60" width="190" x="140" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="u5" parent="sys" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed=0;fontSize=13;" value="Consultar HUD" vertex="1">
+          <mxGeometry height="60" width="190" x="140" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="u6" parent="sys" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed=0;fontSize=13;" value="Jugar oleadas" vertex="1">
+          <mxGeometry height="60" width="190" x="450" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u7" parent="sys" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed=0;fontSize=13;" value="Gestionar estamina" vertex="1">
+          <mxGeometry height="60" width="190" x="450" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="u8" parent="sys" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed=0;fontSize=13;" value="Finalizar partida" vertex="1">
+          <mxGeometry height="60" width="190" x="450" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="u9" parent="sys" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed=0;fontSize=13;" value="Mostrar resultados" vertex="1">
+          <mxGeometry height="60" width="190" x="450" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=14;" value="Jugador" vertex="1">
+          <mxGeometry height="100" width="60" x="70" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="a0" edge="1" parent="1" source="actor" style="endArrow=none;html=1;" target="u1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="actor" style="endArrow=none;html=1;" target="u2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="actor" style="endArrow=none;html=1;" target="u3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="actor" style="endArrow=none;html=1;" target="u4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="actor" style="endArrow=none;html=1;" target="u5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="actor" style="endArrow=none;html=1;" target="u6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="actor" style="endArrow=none;html=1;" target="u8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="u2" style="dashed=1;endArrow=open;endFill=0;html=1;fontSize=12;" target="u7" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="u4" style="dashed=1;endArrow=open;endFill=0;html=1;fontSize=12;" target="u7" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="u8" style="dashed=1;endArrow=open;endFill=0;html=1;fontSize=12;" target="u9" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
