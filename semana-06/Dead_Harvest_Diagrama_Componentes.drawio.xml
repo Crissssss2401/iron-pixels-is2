@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagrama de Componentes" id="ejktW2YepBlDtp9ygYRS">
+    <mxGraphModel dx="1858" dy="964" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;" value="Dead Harvest - Diagrama de Componentes UML" vertex="1">
+          <mxGeometry height="40" width="700" x="450" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-2" parent="1" style="swimlane;html=1;horizontal=1;startSize=35;rounded=0;fillColor=none;strokeColor=#666666;fontStyle=1;" value="&lt;b&gt;Dead Harvest - Unity 2D&lt;/b&gt;" vertex="1">
+          <mxGeometry height="760" width="1430" x="80" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-3" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;Interfaz de Usuario&lt;/b&gt;&lt;br&gt;&lt;br&gt;HUD&lt;br&gt;Menú principal&lt;br&gt;Pausa&lt;br&gt;Pantallas de resultado" vertex="1">
+          <mxGeometry height="150" width="260" x="70" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-4" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;Núcleo de Partida&lt;/b&gt;&lt;br&gt;&lt;br&gt;Estado de partida&lt;br&gt;Inicio / pausa / fin&lt;br&gt;Condiciones de victoria y derrota" vertex="1">
+          <mxGeometry height="170" width="300" x="560" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-5" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;Sistema del Jugador&lt;/b&gt;&lt;br&gt;&lt;br&gt;Movimiento&lt;br&gt;Vida&lt;br&gt;Estamina&lt;br&gt;Esquiva" vertex="1">
+          <mxGeometry height="160" width="260" x="70" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-6" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;Sistema de Combate&lt;/b&gt;&lt;br&gt;&lt;br&gt;Armas cuerpo a cuerpo&lt;br&gt;Daño&lt;br&gt;Alcance&lt;br&gt;Ataques" vertex="1">
+          <mxGeometry height="160" width="260" x="390" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-7" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;Sistema de Enemigos e IA&lt;/b&gt;&lt;br&gt;&lt;br&gt;Detección&lt;br&gt;Persecución&lt;br&gt;Ataque&lt;br&gt;Comportamientos" vertex="1">
+          <mxGeometry height="160" width="280" x="720" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-8" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;Gestión de Oleadas&lt;/b&gt;&lt;br&gt;&lt;br&gt;Spawn de enemigos&lt;br&gt;Progresión&lt;br&gt;Conteo de enemigos&lt;br&gt;Jefe final" vertex="1">
+          <mxGeometry height="160" width="270" x="1070" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-9" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;Sistema de Mejoras&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mejoras temporales&lt;br&gt;Modificadores&lt;br&gt;Duración de efectos" vertex="1">
+          <mxGeometry height="150" width="260" x="220" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-10" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;Entorno / Nivel&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mapa 2D&lt;br&gt;Colisiones&lt;br&gt;Zona de juego&lt;br&gt;Puntos de aparición" vertex="1">
+          <mxGeometry height="160" width="270" x="570" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-11" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;Sistema de Jefe Final&lt;/b&gt;&lt;br&gt;&lt;br&gt;Fases&lt;br&gt;Patrones de ataque&lt;br&gt;Ataques especiales" vertex="1">
+          <mxGeometry height="150" width="260" x="930" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-12" parent="fh9fdTgsY6G4yFVYLmPE-2" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;spacing=10;" value="&lt;b&gt;&amp;lt;&amp;lt;framework&amp;gt;&amp;gt;&lt;br&gt;Unity 2D Engine&lt;/b&gt;&lt;br&gt;&lt;br&gt;Input&lt;br&gt;Physics 2D&lt;br&gt;Scenes&lt;br&gt;Rendering&lt;br&gt;Time" vertex="1">
+          <mxGeometry height="160" width="190" x="1210" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-13" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-4" value="estado / eventos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-14" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-5" value="controla">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-15" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-8" value="coordina">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-16" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-6" value="solicita ataques">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-17" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-7" value="aplica daño">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-18" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-5" value="detecta / ataca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-19" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-7" value="crea / administra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-20" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-11" value="activa jefe final">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-21" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-6" value="usa combate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-22" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-5" value="modifica temporalmente">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-23" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-10" value="colisiones / movimiento">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-24" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-10" value="navegación / spawn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-25" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-12" value="Input / Physics2D">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-26" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-12" value="Physics2D / Scenes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-27" edge="1" parent="fh9fdTgsY6G4yFVYLmPE-2" source="fh9fdTgsY6G4yFVYLmPE-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;dashed=1;" target="fh9fdTgsY6G4yFVYLmPE-12" value="UI / Rendering">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fh9fdTgsY6G4yFVYLmPE-28" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacing=8;" value="&lt;b&gt;Nota de diseño&lt;/b&gt;&lt;br&gt;Los componentes representan la arquitectura lógica propuesta para Dead Harvest. Las dependencias indican servicios utilizados o comunicación entre subsistemas." vertex="1">
+          <mxGeometry height="90" width="450" x="1030" y="870" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
