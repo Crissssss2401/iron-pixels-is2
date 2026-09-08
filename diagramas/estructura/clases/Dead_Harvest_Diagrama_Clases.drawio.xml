@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagrama de Clases" id="HGPUFWoCwyLDujOruNPt">
+    <mxGraphModel dx="1703" dy="883" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5IOxZU_xE5KJCPNcydny-1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;" value="Dead Harvest - Diagrama de Clases UML" vertex="1">
+          <mxGeometry height="40" width="640" x="480" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-2" parent="1" style="swimlane;fontStyle=0;align=left;verticalAlign=top;startSize=30;horizontal=1;html=1;rounded=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;&lt;i&gt;Personaje&lt;/i&gt;&lt;/b&gt;&lt;hr&gt;- vida: float&lt;br&gt;- vidaMaxima: float&lt;br&gt;- velocidad: float&lt;br&gt;- posicion: Vector2&lt;hr&gt;+ mover(direccion: Vector2)&lt;br&gt;+ recibirDanio(cantidad: float)&lt;br&gt;+ morir()" vertex="1">
+          <mxGeometry height="190" width="280" x="600" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-3" parent="1" style="swimlane;align=left;verticalAlign=top;startSize=30;horizontal=1;html=1;rounded=0;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;b&gt;Jugador&lt;/b&gt;&lt;hr&gt;- estamina: float&lt;br&gt;- estaminaMaxima: float&lt;br&gt;- armaEquipada: Arma&lt;br&gt;- mejoraActiva: Mejora&lt;hr&gt;+ atacar()&lt;br&gt;+ esquivar()&lt;br&gt;+ consumirEstamina(cantidad: float)&lt;br&gt;+ equiparArma(arma: Arma)&lt;br&gt;+ aplicarMejora(mejora: Mejora)" vertex="1">
+          <mxGeometry height="230" width="300" x="280" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-4" parent="1" style="swimlane;align=left;verticalAlign=top;startSize=30;horizontal=1;html=1;rounded=0;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" value="&lt;b&gt;Enemigo&lt;/b&gt;&lt;hr&gt;- danio: float&lt;br&gt;- rangoDeteccion: float&lt;br&gt;- velocidadAtaque: float&lt;hr&gt;+ detectarJugador(jugador: Jugador)&lt;br&gt;+ perseguir(jugador: Jugador)&lt;br&gt;+ atacar(jugador: Jugador)&lt;br&gt;+ actualizarComportamiento()" vertex="1">
+          <mxGeometry height="210" width="300" x="700" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-5" parent="1" style="swimlane;align=left;verticalAlign=top;startSize=30;horizontal=1;html=1;rounded=0;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;b&gt;Jefe&lt;/b&gt;&lt;hr&gt;- faseActual: int&lt;br&gt;- umbralFase: float&lt;hr&gt;+ cambiarFase()&lt;br&gt;+ ejecutarAtaqueEspecial()&lt;br&gt;+ actualizarPatron()" vertex="1">
+          <mxGeometry height="180" width="270" x="1100" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-6" parent="1" style="swimlane;align=left;verticalAlign=top;startSize=30;horizontal=1;html=1;rounded=0;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Arma&lt;/b&gt;&lt;hr&gt;- nombre: String&lt;br&gt;- danio: float&lt;br&gt;- alcance: float&lt;br&gt;- velocidadAtaque: float&lt;hr&gt;+ atacar(objetivo: Personaje)&lt;br&gt;+ calcularDanio(): float" vertex="1">
+          <mxGeometry height="180" width="270" x="40" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-7" parent="1" style="swimlane;align=left;verticalAlign=top;startSize=30;horizontal=1;html=1;rounded=0;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Mejora&lt;/b&gt;&lt;hr&gt;- nombre: String&lt;br&gt;- duracion: float&lt;br&gt;- valorModificador: float&lt;br&gt;- tipo: TipoMejora&lt;hr&gt;+ aplicar(jugador: Jugador)&lt;br&gt;+ remover(jugador: Jugador)&lt;br&gt;+ actualizarDuracion(deltaTime: float)" vertex="1">
+          <mxGeometry height="200" width="280" x="350" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-8" parent="1" style="swimlane;align=left;verticalAlign=top;startSize=30;horizontal=1;html=1;rounded=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;GestorPartida&lt;/b&gt;&lt;hr&gt;- estadoPartida: EstadoPartida&lt;br&gt;- jugador: Jugador&lt;br&gt;- oleadaActual: int&lt;hr&gt;+ iniciarPartida()&lt;br&gt;+ pausarPartida()&lt;br&gt;+ reanudarPartida()&lt;br&gt;+ finalizarPartida()&lt;br&gt;+ verificarVictoria()&lt;br&gt;+ verificarDerrota()" vertex="1">
+          <mxGeometry height="210" width="290" x="680" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-9" parent="1" style="swimlane;align=left;verticalAlign=top;startSize=30;horizontal=1;html=1;rounded=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;GestorOleadas&lt;/b&gt;&lt;hr&gt;- numeroOleada: int&lt;br&gt;- enemigosRestantes: int&lt;br&gt;- enemigosActivos: List&lt;Enemigo&gt;&lt;hr&gt;+ iniciarOleada()&lt;br&gt;+ generarEnemigo()&lt;br&gt;+ registrarEnemigoDerrotado()&lt;br&gt;+ finalizarOleada()&lt;br&gt;+ generarJefe()" vertex="1">
+          <mxGeometry height="210" width="300" x="1030" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-10" parent="1" style="swimlane;align=left;verticalAlign=top;startSize=30;horizontal=1;html=1;rounded=0;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;b&gt;HUD&lt;/b&gt;&lt;hr&gt;- barraVida: UIElement&lt;br&gt;- barraEstamina: UIElement&lt;br&gt;- indicadorOleada: UIElement&lt;hr&gt;+ actualizarVida(valor: float)&lt;br&gt;+ actualizarEstamina(valor: float)&lt;br&gt;+ mostrarOleada(numero: int)&lt;br&gt;+ mostrarMejora(mejora: Mejora)" vertex="1">
+          <mxGeometry height="200" width="260" x="1370" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-11" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=16;" target="5IOxZU_xE5KJCPNcydny-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-12" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=16;" target="5IOxZU_xE5KJCPNcydny-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-13" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=16;" target="5IOxZU_xE5KJCPNcydny-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-14" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;endArrow=none;" target="5IOxZU_xE5KJCPNcydny-6" value="equipa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-15" connectable="0" parent="5IOxZU_xE5KJCPNcydny-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.75" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-16" connectable="0" parent="5IOxZU_xE5KJCPNcydny-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.75" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-17" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;endArrow=none;" target="5IOxZU_xE5KJCPNcydny-7" value="recibe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-18" connectable="0" parent="5IOxZU_xE5KJCPNcydny-17" style="edgeLabel;html=1;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.7" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-19" connectable="0" parent="5IOxZU_xE5KJCPNcydny-17" style="edgeLabel;html=1;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.7" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-20" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamond;startFill=1;endArrow=none;" target="5IOxZU_xE5KJCPNcydny-3" value="controla">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-21" connectable="0" parent="5IOxZU_xE5KJCPNcydny-20" style="edgeLabel;html=1;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.7" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-22" connectable="0" parent="5IOxZU_xE5KJCPNcydny-20" style="edgeLabel;html=1;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.7" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-23" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" target="5IOxZU_xE5KJCPNcydny-9" value="coordina">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-24" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamond;startFill=1;endArrow=none;" target="5IOxZU_xE5KJCPNcydny-4" value="gestiona">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-25" connectable="0" parent="5IOxZU_xE5KJCPNcydny-24" style="edgeLabel;html=1;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.7" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-26" connectable="0" parent="5IOxZU_xE5KJCPNcydny-24" style="edgeLabel;html=1;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.7" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-27" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;dashed=1;" target="5IOxZU_xE5KJCPNcydny-5" value="genera">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-28" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" target="5IOxZU_xE5KJCPNcydny-3" value="detecta / ataca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-29" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;dashed=1;" target="5IOxZU_xE5KJCPNcydny-3" value="observa estado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-30" edge="1" parent="1" source="5IOxZU_xE5KJCPNcydny-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;dashed=1;" target="5IOxZU_xE5KJCPNcydny-8" value="muestra progreso">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5IOxZU_xE5KJCPNcydny-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacing=8;" value="&lt;b&gt;Leyenda UML&lt;/b&gt;&lt;br&gt;△ Herencia / Generalización&lt;br&gt;◇ Agregación&lt;br&gt;◆ Composición&lt;br&gt;→ Asociación / dependencia&lt;br&gt;- atributo privado&lt;br&gt;+ operación pública" vertex="1">
+          <mxGeometry height="170" width="230" x="1360" y="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
