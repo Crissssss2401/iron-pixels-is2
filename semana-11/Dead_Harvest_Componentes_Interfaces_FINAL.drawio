@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Coordinación y oleadas">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1000" pageHeight="930">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e0" parent="1" source="ui" target="core" value="I01" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" parent="1" source="core" target="level" value="I02" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="700" y="290" />
+              <mxPoint x="235" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" parent="1" source="core" target="wave" value="I03" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" parent="1" source="wave" target="level" value="I06" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" parent="1" source="wave" target="enemy" value="I04" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="700" y="625" />
+              <mxPoint x="235" y="625" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" parent="1" source="wave" target="boss" value="I05" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" parent="1" vertex="1" value="«component»&#10;C02 Interfaz de usuario&#10;Menús, pausa y resultados&#10;Consume I01" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="40" y="30" width="390" height="170" />
+        </mxCell>
+        <mxCell id="core" parent="1" vertex="1" value="«component»&#10;C01 Núcleo de partida&#10;Inicio, pausa y finalización&#10;Provee I01" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="570" y="30" width="390" height="170" />
+        </mxCell>
+        <mxCell id="level" parent="1" vertex="1" value="«component»&#10;C08 Entorno y nivel&#10;Escena, límites, spawns y botiquines&#10;Provee I02 e I06" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="40" y="370" width="390" height="170" />
+        </mxCell>
+        <mxCell id="wave" parent="1" vertex="1" value="«component»&#10;C06 Gestión de oleadas&#10;Generación, conteo y descanso&#10;Provee I03" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="570" y="370" width="390" height="170" />
+        </mxCell>
+        <mxCell id="enemy" parent="1" vertex="1" value="«component»&#10;C05 Enemigos e IA&#10;Crear, detectar y perseguir&#10;Provee I04" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="40" y="710" width="390" height="170" />
+        </mxCell>
+        <mxCell id="boss" parent="1" vertex="1" value="«component»&#10;C09 Jefe final&#10;Activación y fases del jefe&#10;Provee I05" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="570" y="710" width="390" height="170" />
+        </mxCell>
+      <mxCell id="ev_enemy_wave" value="evento: EnemigoEliminado" style="edgeStyle=orthogonalEdgeStyle;dashed=1;dashPattern=2 2;endArrow=open;endFill=0;fontSize=14;strokeColor=#B85450;fontColor=#B85450;" edge="1" parent="1" source="enemy" target="wave"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="ev_wave_core" value="evento: OleadaCompletada" style="edgeStyle=orthogonalEdgeStyle;dashed=1;dashPattern=2 2;endArrow=open;endFill=0;fontSize=14;strokeColor=#B85450;fontColor=#B85450;" edge="1" parent="1" source="wave" target="core"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="ev_boss_core" value="evento: JefeDerrotado" style="edgeStyle=orthogonalEdgeStyle;dashed=1;dashPattern=2 2;endArrow=open;endFill=0;fontSize=14;strokeColor=#B85450;fontColor=#B85450;" edge="1" parent="1" source="boss" target="core"><mxGeometry relative="1" as="geometry" /></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Combate y presentación">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1000" pageHeight="995">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e0" parent="1" source="player" target="combat" value="I07" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" parent="1" source="combat" target="player" value="I08 · I09" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" parent="1" source="combat" target="enemy" value="I09" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="700" y="305" />
+              <mxPoint x="235" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" parent="1" source="upgrade" target="player" value="I11" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="984" y="475" />
+              <mxPoint x="984" y="10" />
+              <mxPoint x="235" y="10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" parent="1" source="enemy" target="player" value="I12" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" parent="1" source="ui" target="upgrade" value="I13" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="340" y="667" />
+              <mxPoint x="765" y="667" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" parent="1" source="ui" target="audio" value="I14" edge="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=18;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="player" parent="1" vertex="1" value="«component»&#10;C03 Sistema del jugador&#10;Movimiento, vida y estamina&#10;Provee I08, I09 e I11&#10;Consume I07" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="40" y="30" width="390" height="195" />
+        </mxCell>
+        <mxCell id="combat" parent="1" vertex="1" value="«component»&#10;C04 Sistema de combate&#10;Arma, alcance, daño y ataque&#10;Provee I07 e I10&#10;Consume I08 e I09" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="570" y="30" width="390" height="195" />
+        </mxCell>
+        <mxCell id="enemy" parent="1" vertex="1" value="«component»&#10;C05 Enemigos e IA&#10;Receptor de daño y objetivo&#10;Provee I09&#10;Consume I07 e I12" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="40" y="390" width="390" height="195" />
+        </mxCell>
+        <mxCell id="upgrade" parent="1" vertex="1" value="«component»&#10;C07 Sistema de mejoras&#10;Duración y modificadores&#10;Provee I13&#10;Consume I11" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="570" y="390" width="390" height="195" />
+        </mxCell>
+        <mxCell id="ui" parent="1" vertex="1" value="«component»&#10;C02 Interfaz de usuario&#10;HUD, armas y mejoras&#10;Consume I10 e I13&#10;Recibe eventos de estado" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="40" y="750" width="390" height="195" />
+        </mxCell>
+        <mxCell id="audio" parent="1" vertex="1" value="«component»&#10;C10 Sistema de Audio&#10;BGM, SFX, ambiente y volúmenes&#10;Provee I14&#10;Consume eventos de partida/gameplay" style="shape=component;whiteSpace=wrap;html=0;fontSize=20;fillColor=#F1F5F9;strokeColor=#465569;align=left;spacingLeft=18;">
+          <mxGeometry as="geometry" x="570" y="750" width="390" height="195" />
+        </mxCell>
+      <mxCell id="ev_combat_audio" value="evento: AtaqueResuelto" style="edgeStyle=orthogonalEdgeStyle;dashed=1;dashPattern=2 2;endArrow=open;endFill=0;fontSize=14;strokeColor=#B85450;fontColor=#B85450;" edge="1" parent="1" source="combat" target="audio"><mxGeometry relative="1" as="geometry" /></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
